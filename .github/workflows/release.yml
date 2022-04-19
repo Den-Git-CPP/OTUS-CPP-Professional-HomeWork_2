@@ -20,7 +20,7 @@ jobs:
       - run: cmake --build . --target test
       - run: cmake --build . --target package
       - run: ./IPFilter_cli
-      - run: ./g_test_version
+      - run: ./g_test_ipfilter
       
       - name: Create Release
         id: create_release
