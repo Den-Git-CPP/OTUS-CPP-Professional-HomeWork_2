@@ -1,6 +1,6 @@
 #include "IPFilter.h"
 
-IPFilter::IPFilter(const std::filesystem::path& file_data_patch) {
+IPFilter::IPFilter(const std::string& file_data_patch) {
 	std::ifstream infile;
 	infile.open(file_data_patch);
 
@@ -68,7 +68,7 @@ void IPFilter::sort_greater() {
 
 void IPFilter::print_all_elem() {
 	for (auto elem : all_IPElem) {
-		std::cout << elem << "\n";
+			std::cout<<elem << "\n";
 	}
 }
 

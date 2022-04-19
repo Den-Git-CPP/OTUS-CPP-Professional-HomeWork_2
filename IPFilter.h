@@ -4,6 +4,7 @@
 #include <fstream>
 #include <filesystem>
 #include <string>
+#include <vector>
 #include <stdexcept>
 #include <algorithm>
 
@@ -12,13 +13,14 @@
 class IPFilter {
 public:
 	IPFilter();
-	IPFilter(const std::filesystem::path& file_data_patch);
+	IPFilter(const std::string& file_data_patch);
 	~IPFilter();
 	void sort_greater();
 	void print_all_elem();
 	template<typename... Args>
 	void subsequent_filter(Args... args);
 	void any_filter(int part);
+	size_t size(){return all_IPElem.size();}
 private:
 	std::vector<IPElem> all_IPElem;
 	std::vector<std::string> split(const std::string& str, char d);

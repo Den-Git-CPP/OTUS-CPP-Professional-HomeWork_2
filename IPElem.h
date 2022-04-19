@@ -13,7 +13,10 @@ public:
 	int _n_2 {};
 	int _n_3 {};
 	int _n_4 {};
-
+	friend inline  bool operator==(const IPElem& lhs, const IPElem& rhs) {
+		return	std::tie(lhs._n_1, lhs._n_2, lhs._n_3, lhs._n_4) ==
+			std::tie(rhs._n_1, rhs._n_2, rhs._n_3, rhs._n_4);
+	}
 	friend inline  bool operator<(const IPElem& lhs, const IPElem& rhs) {
 		return	std::tie(lhs._n_1, lhs._n_2, lhs._n_3, lhs._n_4) <
 			std::tie(rhs._n_1, rhs._n_2, rhs._n_3, rhs._n_4);
