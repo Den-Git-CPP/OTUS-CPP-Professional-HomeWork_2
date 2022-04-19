@@ -109,7 +109,7 @@ endif()
 file(COPY ip_filter.tsv DESTINATION  ${CMAKE_BINARY_DIR})
 
 enable_testing()
-add_test(test_version g_test_version)
+add_test(test_version g_test_ipfilter)
 
 install(TARGETS IPFilter_cli RUNTIME DESTINATION bin)
 
