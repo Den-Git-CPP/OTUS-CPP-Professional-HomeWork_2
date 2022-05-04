@@ -42,3 +42,4 @@ jobs:
           asset_path: ./IPFilter-0.0.${{ github.run_number }}-Linux.deb
           asset_name: IPFilter-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+          
