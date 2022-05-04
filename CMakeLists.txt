@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(IPFilter VERSION 0.0.$ENV{GITHUB_RUN_NUMBER})
+
+if ($ENV{GITHUB_RUN_NUMBER})
+    project (IPFilter VERSION 0.0.$ENV{GITHUB_RUN_NUMBER})
+else()
+    project (IPFilter VERSION 0.0.1)
+endif()
+
 
 configure_file(version.h.in version.h)
 
